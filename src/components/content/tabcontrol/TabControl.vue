@@ -27,19 +27,21 @@ export default {
   methods: {
     itemClick(index){
       this.curIndex = index;
+      //把index传给Home组件
+      this.$emit("tabClick",index);
     }
   }
 }
 </script>
 
-<style>
+<style >
 #tab-control{
   display: flex;
   text-align: center;
   font-size: 15px;
   height: 40px;
   line-height: 40px;
-  background: darkgreen;
+  background: #fff;
 }
 
 .item-control{
